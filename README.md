@@ -1,2 +1,5 @@
-# On Training Robust PDF Malware Classifiers (Usenix Security'20)
+# On Training Robust PDF Malware Classifiers
+
+(Usenix Security'20)
+
 Coming soon.
