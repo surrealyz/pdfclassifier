@@ -57,8 +57,12 @@ The following are XgBoost tree ensemble models.
 | model_1000learner.bin  | Monotonic Classifier, 1000 learners  |
 | model_2000learner.bin  | 	Monotonic Classifier, 2000 learners  |
 
-## Training code
+## Training Code
 
-## Baseline comparison
+## Baseline Comparison
 
-## Attacks
+## Attacks in the Paper
+
+## MalGAN Attack Evaluation
+
+Please check out this [MalGAN attack evaluation](https://github.com/xiaoluLucy814/Malware-GAN-attack) against our robust models by [Zeyi](https://github.com/xiaoluLucy814/).
