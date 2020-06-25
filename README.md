@@ -26,7 +26,36 @@ The extracted training and testing libsvm files are [here](https://github.com/su
 
 [500 seed malware hash list.](https://github.com/surrealyz/pdfclassifier/blob/master/data/seeds_hash_list.txt)
 
-## Robust models
+## Models
+
+The following models are TensorFlow checkpoints, except that two ensemble models need additional wrappers.
+
+| Checkpoint |  Model |
+|---|---|
+| baseline_checkpoint  | Baseline  |
+| baseline_adv_delete_one  | Adv Retrain A  |
+| baseline_adv_insert_one  | Adv Retrain B  |
+| baseline_adv_delete_two  | Adv Retrain C  |
+| baseline_adv_insert_rootallbutone  | 	Adv Retrain D  |
+| baseline_adv_combine_two  | Adv Retrain A+B  |
+| adv_del_twocls  | Ensemble A+B Base Learner  |
+| adv_keep_twocls  | Ensemble D Base Learner  |
+| robust_delete_one  | Robust A  |
+| robust_insert_one  | Robust B  |
+| robust_delete_two  | Robust C  |
+| robust_insert_allbutone  | Robust D  |
+| robust_monotonic  | Robust E  |
+| robust_combine_two_v2_e18  | Robust A+B  |
+| robust_combine_three_e17  | Robust A+B+E  |
+
+The following are XgBoost tree ensemble models.
+
+| Binary  | Model  |
+|---|---|
+| model_10learner_test.bin  | Monotonic Classifier, 10 learners  |
+| model_100learner.bin  | Monotonic Classifier, 100 learners  |
+| model_1000learner.bin  | Monotonic Classifier, 1000 learners  |
+| model_2000learner.bin  | 	Monotonic Classifier, 2000 learners  |
 
 ## Training code
 
