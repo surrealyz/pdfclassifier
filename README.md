@@ -76,7 +76,7 @@ against adaptive attacks can be reduced to 0% for Monotonic 100 and Robust A+B m
 but not Robust A+B+E model. We hope researchers can design stronger attacks
 to evade our Robust A+B+E model.
 
-Using the EvadeML framework, our adaptive strategy against
+Using the [EvadeML framework](https://github.com/surrealyz/EvadeML), our adaptive strategies against
 this model are:
 * **Move Exploit Attack.** The monotonic property (Property E) forces the
 attacker to delete objects from the malware, but deletion could
