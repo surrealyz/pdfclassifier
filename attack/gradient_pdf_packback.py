@@ -201,7 +201,7 @@ def main(args):
     seed_features = genfromtxt('robustness_spec/seed_test_malicious/seed_feature_3416.csv', delimiter=',')
     # load the seed entries together. deepcopy later
     all_sha1 = seed_dict.keys()
-    sha1_500 = [item.split('.')[0] for item in os.listdir('../data/500_seeds/')]
+    sha1_500 = [item.split('.')[0] for item in os.listdir('../data/500_seed_pdfs/')]
     v_i_to_sha1 = {}
     for i in range(len(all_sha1)):
         if all_sha1[i] in sha1_500:
@@ -227,7 +227,7 @@ def main(args):
             ins_indices, del_indices = get_ins_del(seed_vec, vector)
             # get the original PDF object, then mutate.
             sha1 = v_i_to_sha1[v_i]
-            src_entry = PdfGenome.load_genome('../data/500_seeds/%s.pdf' % sha1, noxref = True)
+            src_entry = PdfGenome.load_genome('../data/500_seed_pdfs/%s.pdf' % sha1, noxref = True)
             generate_pdf(src_entry, all_sha1[v_i], ins_indices, del_indices, model_names[m_i])
 
     return
