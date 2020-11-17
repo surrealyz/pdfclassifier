@@ -48,7 +48,7 @@ The following models are TensorFlow checkpoints, except that two ensemble models
 | robust_combine_two_v2_e18  | Robust A+B  |
 | robust_combine_three_e17  | Robust A+B+E  |
 
-The following are XgBoost tree ensemble models.
+The following are XGBoost tree ensemble models.
 
 | Binary  | Model  |
 |---|---|
@@ -59,11 +59,10 @@ The following are XgBoost tree ensemble models.
 
 ## Training Code
 
-To train baseline model, adv retrain models, and robust models, see [README](https://github.com/surrealyz/pdfclassifier/tree/master/src) under `src/`.
-
-## Baseline Comparison
+To train and evaluate the VRAs of baseline model, adv retrain models, ensemble models, XGBoost monotonic models, and robust models, see [README](https://github.com/surrealyz/pdfclassifier/tree/master/train) under `train/`.
 
 ## Attacks in the Paper
+
 
 ## MalGAN Attack Evaluation
 
