@@ -22,7 +22,7 @@ We obtained the following training and testing data.
 
 The hidost structural paths are [here](https://github.com/surrealyz/pdfclassifier/tree/master/data/extracted_structural_paths).
 
-The extracted training and testing libsvm files are [here](https://github.com/surrealyz/pdfclassifier/tree/master/data).
+The extracted training and testing libsvm files are [here](https://github.com/surrealyz/pdfclassifier/tree/master/data/traintest_all_500test). The 500 seed malware samples with network activities from EvadeML are in the test set.
 
 [500 seed malware hash list.](https://github.com/surrealyz/pdfclassifier/blob/master/data/seeds_hash_list.txt)
 
@@ -58,6 +58,8 @@ The following are XgBoost tree ensemble models.
 | model_2000learner.bin  | 	Monotonic Classifier, 2000 learners  |
 
 ## Training Code
+
+To train baseline model, adv retrain models, and robust models, see (README)[https://github.com/surrealyz/pdfclassifier/tree/master/src] under `src/`.
 
 ## Baseline Comparison
 
