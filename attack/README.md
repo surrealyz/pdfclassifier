@@ -40,6 +40,15 @@ The following model name options correspond to the neural network models:
 | RABE | robust_combine_three_e17  | Robust A+B+E  |
 
 
+### Pack the evasive feature vectors back to real PDFs
+
+Put the benign PDF dataset under here `../data/traintest_all_500test/train_benign`.
+Download the feature vectors resulting from the unrestricted gradient attacks from [here](https://drive.google.com/file/d/1zHT_Pm27EbO7IsLAOxSex0lwLCu_12yC/view?usp=sharing). Extract the file and put it under `../data/`. Put the 500 seed PDFs with network signatures under `../data/500_seeds/`.
+
+Run `python gradient_pdf_packback.py`.
+
+Given each feature index change, we either delete the corresponding PDF object, or insert the object with minimal number of children in the benign training dataset. Inserting object with minimal children makes the features from constructed PDF close to the evasive features. On average, the ERA of models against the real evasive PDF malware is 94.25%, much higher than 0.62% ERA against evasive feature vectors, since unrestricted gradient attack often breaks the PDF semantics.
+
 ## MILP Attacker
 
 

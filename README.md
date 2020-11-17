@@ -24,7 +24,7 @@ The hidost structural paths are [here](https://github.com/surrealyz/pdfclassifie
 
 The extracted training and testing libsvm files are [here](https://github.com/surrealyz/pdfclassifier/tree/master/data/traintest_all_500test). The 500 seed malware samples with network activities from EvadeML are in the test set.
 
-[500 seed malware hash list.](https://github.com/surrealyz/pdfclassifier/blob/master/data/seeds_hash_list.txt)
+[500 seed malware hash list.](https://github.com/surrealyz/pdfclassifier/blob/master/data/seeds_hash_list.txt). Put these PDFs under `data/500_seeds/`.
 
 ## Models
 
