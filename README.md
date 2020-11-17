@@ -63,6 +63,7 @@ To train and evaluate the VRAs of baseline model, adv retrain models, ensemble m
 
 ## Attacks in the Paper
 
+See [README](https://github.com/surrealyz/pdfclassifier/tree/master/attack) under `attack/`.
 
 ## MalGAN Attack Evaluation
 
