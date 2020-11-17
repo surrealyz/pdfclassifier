@@ -65,6 +65,28 @@ To train and evaluate the VRAs of baseline model, adv retrain models, ensemble m
 
 See [README](https://github.com/surrealyz/pdfclassifier/tree/master/attack) under `attack/`.
 
+<p align="center">
+  <img src="https://surrealyz.github.io/image/era_feat_adaptive.png" alt="robust_gbdt" width="50%" height="50%"/>
+</p>
+
+After running our adaptive attack based on EvadeML against the Robust A+B+E model
+for three weeks, we were not able to fully evade the model to generate functional evasive
+PDF malware variants. As shown in the Figure above, the estimated robust accuracy
+against adaptive attacks can be reduced to 0% for Monotonic 100 and Robust A+B models,
+but not Robust A+B+E model. We hope researchers can design stronger attacks
+to evade our Robust A+B+E model.
+
+Using the EvadeML framework, our adaptive strategy against
+this model are:
+* **Move Exploit Attack.** The monotonic property (Property E) forces the
+attacker to delete objects from the malware, but deletion could
+remove the exploit. Therefore, we implement a new mutation
+to move the exploit around to different trigger points in the PDF.
+* **Scatter Attack.** To evade Robust A+B and Robust A+B+E, we insert and delete
+more objects under different subtrees. We keep track of past
+insertion and deletion operations separately, and prioritize new
+insertion and deletion operations to target a different subtree.
+
 ## MalGAN Attack Evaluation
 
 Please check out this [MalGAN attack evaluation](https://github.com/xiaoluLucy814/Malware-GAN-attack) against our robust models by [Zeyi](https://github.com/xiaoluLucy814/).
