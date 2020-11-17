@@ -51,9 +51,9 @@ Given each feature index change, we either delete the corresponding PDF object, 
 
 ## MILP Attacker
 
-The Mixed Integer Linear Program (MILP) attack was proposed in "Evasion and Hardening of Tree Ensemble Classifiers" by Alex Kantchelian, J. D. Tygar, and Anthony D. Joseph, ICML 2016.
+The Mixed Integer Linear Program (MILP) attack was proposed in "Evasion and Hardening of Tree Ensemble Classifiers" by Alex Kantchelian, J. D. Tygar, and Anthony D. Joseph. ICML 2016.
 
-The attack script is modified from the one under [RobustTrees](https://github.com/chenhongge/RobustTrees/blob/master/xgbKantchelianAttack.py). You will need to install Gurobi solver and obtain an academic license to run it.
+The attack script is modified from the one under [RobustTrees](https://github.com/chenhongge/RobustTrees/blob/master/xgbKantchelianAttack.py). You will need to install the Gurobi solver and obtain a license to run it. They provide free academic license.
 
 The following example minimize the L<sub>0</sub> distance for the MILP Attacker, and targets the model `model_100learner`. You can modify the attack objective and the model in the command.
 ```
@@ -65,6 +65,35 @@ o='0'; md='model_100learner'; r="_l${o}"; python xgbKantchelianAttack.py --order
 
 
 ## Reverse Mimicry Attacker
+
+We implement our own reverse mimicry attack, similar to the
+JSinject. We use [peepdf](https://github.com/jesparza/peepdf) tatic analyzer to identify the
+suspicious objects in the PDF malware seeds, and then inject
+these objects to a benign PDF. We inject different malicious
+payload into a benign file, whereas the JSinject attack injects
+the same JavaScript code into different benign PDFs. Within
+the PDF malware seeds, 250 of them retained maliciousness
+according to the cuckoo oracle. Some payload are no longer
+malicious because there can be object dependencies within the
+malware not identified by the static analyzer. We test whether
+the models can detect the 250 PDFs are malicious.
+
+The following generates reverse mimicry PDFs by inserting malicious payload
+from the seeds to the benign PDF `win08.pdf`.
+```
+cd reverse_mimicry;
+mkdir test_files;
+python all_insert_epath.py
+```
+
+We also provided a script `all_check_cuckoo.py` that we used to check whether
+the cuckoo oracle thinks the generated PDFs are malicious, with the results
+in `cuckoo_test_files.tsv`. You can reference the script, but will need to change
+it according to your cuckoo and evademl setup.
+Among these that were verified to be malicious by the cuckoo oracle,
+different classifiers have different accuracy for them, see Table 6 in our paper. 
+
+JSInject: "Looking at the bag is not enough to find the bomb: an evasion of structural methods for malicious PDF files detection" Davide Maiorca, Igino Corona, and Giorgio Giacinto. ASIA CCS 2013.
 
 
 ## Adaptive Evolutionary Attacker
