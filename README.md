@@ -59,7 +59,7 @@ The following are XgBoost tree ensemble models.
 
 ## Training Code
 
-To train baseline model, adv retrain models, and robust models, see (README)[https://github.com/surrealyz/pdfclassifier/tree/master/src] under `src/`.
+To train baseline model, adv retrain models, and robust models, see [README](https://github.com/surrealyz/pdfclassifier/tree/master/src) under `src/`.
 
 ## Baseline Comparison
 
