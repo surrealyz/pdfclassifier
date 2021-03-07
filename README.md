@@ -6,6 +6,7 @@ Yizheng Chen, Shiqi Wang, Dongdong She, Suman Jana
 ## Blog Posts
 
 [Monotonic Malware Classifiers (5 min read)](https://surrealyz.medium.com/monotonic-malware-classifiers-83cd4451f58d)
+
 [Gmail's malicious document classifier can still be trivially evaded (3 min read)](https://surrealyz.medium.com/gmails-malicious-document-classifier-can-still-be-trivially-evaded-93e625745c9d)
 
 ## Dataset
