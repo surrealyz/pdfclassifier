@@ -14,10 +14,10 @@ The following attack methods are available:
 | un | unrestrcited gradient attack|
 | uni | unrestricted insertion-only attack (Property E) |
 | und | unrestricted deletion-only attack |
-| A | restricted gradeint attack bounded by Property A |
-| B | restricted gradeint attack bounded by Property B |
-| C | restricted gradeint attack bounded by Property C |
-| D | restricted gradeint attack bounded by Property D |
+| A | restricted gradient attack bounded by Property A |
+| B | restricted gradient attack bounded by Property B |
+| C | restricted gradient attack bounded by Property C |
+| D | restricted gradient attack bounded by Property D |
 
 The following model name options correspond to the neural network models:
 

@@ -106,7 +106,7 @@ time python train_combine_monotonic.py --resume --train robustness_spec/seed_tra
 Then pick the best one from the last few epochs.
 
 
-#### Evaluate the five properties
+#### Evaluate the Verified Robust Accuracy of five properties
 Substitue baseline_adv_delete_one with any model name.
 Sequence: property A, property B, property C, property D, property E.
 ```
@@ -120,7 +120,7 @@ model=$(echo baseline_adv_delete_one); python train_delete.py --evaluate --model
 ```
 python train_adv_twocls.py --train_ben robustness_spec/seed_train_benign/mutate_delete_one/pickles/ --test_ben robustness_spec/seed_test_benign/mutate_delete_one/pickles/ --train_mal robustness_spec/seed_train_malicious/mutate_delete_one/pickles/ --test_mal robustness_spec/seed_test_malicious/mutate_delete_one/pickles/ --model_name adv_del_twocls
 ```
-* Evaluate the properties:
+* Evaluate the Verified Robust Accuracy of properties:
 Construct the ensemble and test Property B:
 ```
 python classifier_ensemble.py --model_name adv_del_twocls
@@ -143,7 +143,7 @@ python train_adv_twocls.py --train_ben robustness_spec/seed_train_benign/mutate_
 ```
 python classifier_ensemble_d.py --model_name adv_keep_twocls
 ```
-* Evaluate the properties:
+* Evaluate the Verified Robust Accuracy of properties:
 ```
 python eval_ensemble_keepone.py --model_name adv_keep_twocls
 ```
@@ -154,6 +154,6 @@ python eval_ensemble_keepone.py --model_name adv_keep_twocls
   * 100 Trees `python monotonic.py --num_trees 100 --model_name model_100learner`
   * 1K Trees `python monotonic.py --num_trees 1000 --model_name model_1000learner`
   * 2K Trees `python monotonic.py --num_trees 2000 --model_name model_2000learner`
-* Evaluate the properties:
+* Evaluate the Verified Robust Accuracy of properties:
   * Test Property A: `python monotonic_test_deletion_one.py --model $model_name`
   * Test Property C: `python monotonic_test_deletion_two.py --model $model_name`
