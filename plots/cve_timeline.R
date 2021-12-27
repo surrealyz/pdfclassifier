@@ -17,5 +17,5 @@ p <- ggplot(df) +
           legend.box.background = element_rect(fill = NA, linetype="solid", size=0.5),
           legend.key.width = unit(1.2, "cm"))
 
-ggsave("cve_timeline.pdf", plot = p, width=8, height=4)
-ggsave("cve_timeline.png", plot = p, width=8, height=4)
+ggsave("cve_timeline.pdf", plot = p, width=10, height=4)
+ggsave("cve_timeline.png", plot = p, width=10, height=4)
